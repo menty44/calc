@@ -6,7 +6,7 @@
 </head>
 <body bgcolor="#009933">
 
-<h1>Simple:</h1>
+<h1>Calculator for Integers:</h1>
 <form action="#" th:action="@{/calculator}" th:object="${operationModel}" method="POST">
     <input type="text" th:field="*{a}"/>
     <input type="text" th:field="*{b}"/>
@@ -20,5 +20,25 @@
 
     <h1><p th:text="'result: ' + ${result}"/></h1>
 </form>
+
+
+<!--<div style="padding-top: 5%;">-->
+<!--    <h1>Calculator for Floats:</h1>-->
+
+<!--    <form action="#" th:action="@{/calculator}" th:object="${floatOperationModel}" method="POST">-->
+<!--        <input type="text" th:field="*{a}"/>-->
+<!--        <input type="text" th:field="*{b}"/>-->
+<!--        <p>-->
+<!--            <input type="submit" class="button" name="add" value="+"/>-->
+<!--            <input type="submit" class="button" name="subtract" value="-"/>-->
+<!--            <input type="submit" class="button" name="multiply" value="*"/>-->
+<!--            <input type="submit" class="button" name="divide" value="/"/>-->
+<!--            <input type="submit" class="button" name="clearSimple" value="Clear Field"/>-->
+<!--        </p>-->
+
+<!--        <h1><p th:text="'result: ' + ${result}"/></h1>-->
+<!--    </form>-->
+<!--</div>-->
+
 </body>
 </html>

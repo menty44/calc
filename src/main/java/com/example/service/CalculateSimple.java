@@ -15,28 +15,10 @@ public class CalculateSimple {
     }
 
     public int multiply(OperationModel model){
-        return model.getA() * model.getB();
+        return (model.getA() * model.getB());
     }
 
     public double divide(OperationModel model){
-        if(model.getA() == 0) return 0;
-        if(model.getB() == 0) return 0;
-        return (double) model.getA() / model.getB();
-    }
-
-    public int fadd(OperationModel model){
-        return model.getA() + model.getB();
-    }
-
-    public int fsubtract(OperationModel model){
-        return model.getA() - model.getB();
-    }
-
-    public int fmultiply(OperationModel model){
-        return model.getA() * model.getB();
-    }
-
-    public double fdivide(OperationModel model){
         if(model.getA() == 0) return 0;
         if(model.getB() == 0) return 0;
         return (double) model.getA() / model.getB();

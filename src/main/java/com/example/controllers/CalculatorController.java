@@ -45,18 +45,6 @@ public class CalculatorController {
         return "calculator";
     }
 
-    @RequestMapping(value="/calculator", params="fibonacci", method = RequestMethod.POST)
-    public String fibonacci(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
-        model.addAttribute("result", calculateSimple.fibonacci(operationModel));
-        return "calculator";
-    }
-
-    @RequestMapping(value="/calculator", params="sqrt", method = RequestMethod.POST)
-    public String sqrt(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
-        model.addAttribute("result", calculateSimple.sqrt(operationModel));
-        return "calculator";
-    }
-
     @RequestMapping(value="/calculator", params="clearSimple", method = RequestMethod.POST)
     public String clearSimple(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
         model.addAttribute("operationModel",  calculateSimple.clearSimple(operationModel));
