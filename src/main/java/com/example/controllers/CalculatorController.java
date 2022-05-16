@@ -57,18 +57,6 @@ public class CalculatorController {
         return "calculator";
     }
 
-    @RequestMapping(value="/calculator", params="power", method = RequestMethod.POST)
-    public String power(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
-        model.addAttribute("result", calculateSimple.power(operationModel));
-        return "calculator";
-    }
-
-    @RequestMapping(value="/calculator", params="factorial", method = RequestMethod.POST)
-    public String factorial(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
-        model.addAttribute("result", calculateSimple.factorial(operationModel));
-        return "calculator";
-    }
-
     @RequestMapping(value="/calculator", params="clearSimple", method = RequestMethod.POST)
     public String clearSimple(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
         model.addAttribute("operationModel",  calculateSimple.clearSimple(operationModel));
@@ -76,10 +64,4 @@ public class CalculatorController {
         return "calculator";
     }
 
-    @RequestMapping(value="/calculator", params="clearAdvanced", method = RequestMethod.POST)
-    public String clearAdvanced(@ModelAttribute("operationModel")  OperationModel operationModel, Model model ){
-        model.addAttribute("operationModel",  calculateSimple.clearAdvanced(operationModel));
-        model.addAttribute("result", 0);
-        return "calculator";
-    }
 }

@@ -2,7 +2,6 @@ package com.example.service;
 
 import com.example.model.OperationModel;
 import org.springframework.stereotype.Service;
-import java.lang.Math;
 
 @Service
 public class CalculateSimple {
@@ -25,31 +24,22 @@ public class CalculateSimple {
         return (double) model.getA() / model.getB();
     }
 
-    public int factorial(OperationModel model) {
-        return factorial(model.getC());
+    public int fadd(OperationModel model){
+        return model.getA() + model.getB();
     }
 
-    private int factorial(int n){
-        return n < 2 ? n : n * factorial(n-1);
+    public int fsubtract(OperationModel model){
+        return model.getA() - model.getB();
     }
 
-    public int fibonacci(OperationModel model){
-        return fibonacci(model.getC());
+    public int fmultiply(OperationModel model){
+        return model.getA() * model.getB();
     }
 
-    private int fibonacci(int n){
-        if(n == 0) return 0;
-        else if(n == 1) return 1;
-        else if(n == 2) return 1;
-        else return fibonacci(n-1) + fibonacci(n-2);
-    }
-
-    public double sqrt(OperationModel model){
-        return Math.sqrt(model.getC());
-    }
-
-    public int power(OperationModel model){
-        return model.getC() * model.getC();
+    public double fdivide(OperationModel model){
+        if(model.getA() == 0) return 0;
+        if(model.getB() == 0) return 0;
+        return (double) model.getA() / model.getB();
     }
 
     public OperationModel clearSimple(OperationModel model){
@@ -58,8 +48,4 @@ public class CalculateSimple {
         return model;
     }
 
-    public OperationModel clearAdvanced(OperationModel model){
-        model.setC(0);
-        return model;
-    }
 }
